@@ -14,14 +14,14 @@ app.use(express.json());
 
 //Middlware for handling CORS Policy
 //Option 1: Allow all the origins with Default of cors(*)
-app.use(cors());
+// app.use(cors());
 
-//Option 2:Allow Custom Origins
-// app.use(cors({
-//   origin:'https://localhost:3000', //Only the clients with this origin can access this server
-//   method:['GET','POST','PUT','DELETE'], //only there methods can be used by the client 
-//   allowedHeaders: ['Content-Type'] 
-// }));
+// Option 2:Allow Custom Origins
+app.use(cors({
+  origin:'https://summikha5427.github.io/youtube-vite/', //Only the clients with this origin can access this server
+  method:['GET','POST','PUT','DELETE'], //only there methods can be used by the client 
+  allowedHeaders: ['Content-Type'] 
+}));
 
 //-----------Route for checking Connection with the server
 
