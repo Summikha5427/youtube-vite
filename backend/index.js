@@ -12,13 +12,13 @@ const app = express();
 app.use(express.json());
 
 
-//Middlware for handling CORS Policy
-//Option 1: Allow all the origins with Default of cors(*)
+// Middlware for handling CORS Policy
+// Option 1: Allow all the origins with Default of cors(*)
 // app.use(cors());
 
-// Option 2:Allow Custom Origins
+// // Option 2:Allow Custom Origins
 app.use(cors({
-  origin:'https://summikha5427.github.io/youtube-vite/', //Only the clients with this origin can access this server
+  origin:'*', //Only the clients with this origin can access this server
   method:['GET','POST','PUT','DELETE'], //only there methods can be used by the client 
   allowedHeaders: ['Content-Type'] 
 }));
